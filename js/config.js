@@ -1,0 +1,12 @@
+export const Z_INDEX = -1;
+export const TRIES = 3;
+export const SUCCESS_MESSAGE = 'Type the next word';
+export const FAIL_MESSAGE_INCORRECT = 'Incorrect word';
+export const FAIL_MESSAGE_REPEAT = 'Do not repeat yourself';
+export const LOSE_MESSAGE = 'You lost';
+export const SUCCESS_COLOR = '67FFC8';
+export const FAIL_COLOR = 'FF6767';
+export const FAIL_COLOR_WHITE = 'FFF';
+export const INIT_CIRCLES_COLOR = 'FFFB9B';
+export const INIT_BACKGROUND_COLOR = 'FBFBFB';
+export const INIT_TEXT_COLOR = '333';

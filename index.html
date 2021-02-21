@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Words</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Teko:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="js/controller.js"></script>
+  </head>
+  <body>
+    <section class="wrapper">
+      <div class="container">
+        <h1 class="title">Words</h1>
+
+        <img
+          src="img/circle.svg"
+          alt="circle"
+          class="circle-img"
+          id="left-top-corner"
+        />
+        <span class="circle" id="circle-left-top"></span>
+        <span class="circle" id="circle-left-bottom"></span>
+        <img
+          src="img/circle.svg"
+          alt="circle"
+          class="circle-img"
+          id="right-top-corner"
+        />
+
+        <form class="game__container">
+          <div class="game__container-messages">
+            <span class="text game-message">Type the first word</span>
+            <span class="text"
+              >Your score: <span class="game-score">11</span></span
+            >
+          </div>
+
+          <div class="game__container-inputs">
+            <input type="text" class="input game-input" />
+            <span class="letter">A</span>
+          </div>
+
+          <div class="game__container-tries">
+            <span class="text">Tries Left:</span>
+            <div class="tries__container">
+              <!-- <img src="img/heart.svg" alt="heart" class="heart" /> -->
+            </div>
+          </div>
+
+          <button class="btn submit-btn">Submit</button>
+          <button class="btn retry-btn hidden">Try again</button>
+        </form>
+
+        <span class="circle" id="circle-right-top"></span>
+        <span class="circle" id="circle-right-bottom"></span>
+        <img
+          src="img/circle.svg"
+          alt="circle"
+          class="circle-img"
+          id="left-bottom-corner"
+        />
+
+        <div class="message">
+          <button class="closeBtn">
+            <img src="img/cross.svg" alt="close" />
+          </button>
+          <p class="message__text">
+            The overall objective of the game you are about to play will help
+            expand person’s vocabulary. With the start of a base word, an
+            individual will be submitting a word that begins with the last
+            letter of the previous term. For example, following the progression:
+            <br /><br />
+            Crab, Bribe, Eat, Team, Meet, Tear, Rare
+            <br /><br />
+            would follow the rule of connecting each word based on the last
+            letter of each expression. From this, words must be part of the
+            English dictionary, and cannot be repeated within the game.
+          </p>
+        </div>
+        <div class="overlay"></div>
+
+        <span class="footer">by Dmytro Sereda</span>
+        <img
+          src="img/circle.svg"
+          alt="circle"
+          class="circle-img"
+          id="right-bottom-corner"
+        />
+      </div>
+    </section>
+    <!-- <footer class="footer">
+      <span class="footer">by Dmytro Sereda</span>
+    </footer> -->
+  </body>
+</html>
