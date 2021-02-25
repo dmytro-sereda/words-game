@@ -1,3 +1,4 @@
+import icon from 'url:../../img/heart.svg';
 import decorationsView from './decorations.js';
 import {
   INIT_BACKGROUND_COLOR,
@@ -60,7 +61,7 @@ class GameView {
     this._triesContainer.innerHTML = '';
     let markup = ``;
     for (let i = tries; i > 0; i--) {
-      markup += '<img src="heart.d22d61e2.svg" alt="heart" class="heart" />';
+      markup += `<img src="${icon}" alt="heart" class="heart" />`;
     }
     this._triesContainer.insertAdjacentHTML('afterbegin', markup);
   }
