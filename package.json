@@ -2,15 +2,15 @@
   "name": "words-game",
   "version": "1.0.0",
   "description": "A vocabulary developing game",
-  "main": "index.js",
-  "dependencies": {},
-  "devDependencies": {
-    "parcel": "^2.0.0-beta.1"
-  },
+  "default": "index.html",
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html --dist-dir ./dist"
   },
   "author": "Dmytro Sereda",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "parcel": "^2.0.0-beta.1"
+  }
 }
