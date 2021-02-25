@@ -1,5 +1,6 @@
 'use strict';
 
+import { async } from 'regenerator-runtime';
 import * as model from './model.js';
 import {
   SUCCESS_MESSAGE,

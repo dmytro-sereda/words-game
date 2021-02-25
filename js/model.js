@@ -1,4 +1,5 @@
 import { TRIES } from './config.js';
+import { async } from 'regenerator-runtime';
 
 export const state = {
   wordsSubmitted: [],

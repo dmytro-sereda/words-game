@@ -9,7 +9,9 @@
   },
   "author": "Dmytro Sereda",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "regenerator-runtime": "^0.13.7"
+  },
   "devDependencies": {
     "parcel": "^2.0.0-beta.1"
   }
