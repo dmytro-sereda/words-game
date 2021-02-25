@@ -268,6 +268,10 @@ h1 {
     top: 20%;
     left: 24%;
   }
+
+  .btn {
+    margin-bottom: 40%;
+  }
 }
 
 @media screen and (max-width: 1190px) {

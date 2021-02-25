@@ -37,7 +37,7 @@ class GameView {
   }
 
   getLastLetter() {
-    return this.getWord().slice(-1);
+    return this.getWord().trim().slice(-1);
   }
 
   getLetter() {
