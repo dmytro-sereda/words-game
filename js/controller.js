@@ -24,7 +24,7 @@ async function controlSubmit() {
   try {
     if (model.state.tries !== 0) {
       if (
-        gameView.getWord().length > 1 &&
+        gameView.getWord().length > 2 &&
         gameView.getWord().charAt(0) === gameView.getLetter() &&
         !model.state.wordsSubmitted.some(word => word === gameView.getWord()) &&
         (await model.searchTheWord(gameView.getWord()))

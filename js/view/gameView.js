@@ -79,13 +79,17 @@ class GameView {
     this._retryBtn.classList.remove('hidden');
     this._submitBtn.style.zIndex = 0;
     this._retryBtn.style.zIndex = 1;
+    this._retryBtn.style.display = 'block';
+    this._submitBtn.style.display = 'none';
   }
 
   substituteButtonsRetry() {
-    this._submitBtn.style.zIndex = 1;
-    this._retryBtn.style.zIndex = -1;
     this._submitBtn.classList.remove('hidden');
     this._retryBtn.classList.add('hidden');
+    this._submitBtn.style.zIndex = 1;
+    this._retryBtn.style.zIndex = -1;
+    this._submitBtn.style.display = 'block';
+    this._retryBtn.style.display = 'none';
   }
 
   init() {

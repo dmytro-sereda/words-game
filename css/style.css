@@ -121,10 +121,10 @@ h1 {
   border: 3px solid #fff;
   background: none;
   width: 284px;
-  position: absolute;
-  top: 54.9%;
-  left: 44.5%;
   z-index: -1;
+  margin: 0 auto;
+  margin-bottom: 80%;
+  display: none;
 }
 
 .retry-btn:hover {
@@ -245,4 +245,147 @@ h1 {
   right: 15%;
   width: 140px;
   height: 140px;
+}
+
+@media screen and (max-width: 1600px) {
+  #circle-left-top {
+    left: 15%;
+  }
+
+  #circle-right-top {
+    right: 15%;
+  }
+
+  #right-top-corner {
+    right: 15.5%;
+  }
+
+  #circle-right-bottom {
+    right: 10%;
+  }
+
+  .message {
+    top: 20%;
+    left: 24%;
+  }
+}
+
+@media screen and (max-width: 1190px) {
+  #circle-left-top {
+    left: 10%;
+  }
+
+  #circle-right-top {
+    right: 5%;
+  }
+
+  #right-top-corner {
+    right: 5.5%;
+  }
+
+  #circle-right-bottom {
+    right: 0%;
+  }
+
+  .message {
+    width: 70%;
+    left: 14%;
+  }
+
+  .btn {
+    margin-bottom: 30%;
+  }
+
+  #circle-left-bottom {
+    left: 3%;
+    bottom: 0;
+  }
+
+  #left-bottom-corner {
+    left: 2%;
+    bottom: 2%;
+  }
+
+  #right-bottom-corner {
+    display: none;
+  }
+
+  h1 {
+    margin-bottom: 15%;
+  }
+
+  #left-top-corner {
+    top: -30%;
+    left: -15%;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .circle {
+    display: none;
+  }
+
+  .circle-img {
+    display: none;
+  }
+
+  .message__text {
+    margin-top: 60px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .game__container {
+    width: 90%;
+  }
+
+  .game__container-messages {
+    flex-direction: column;
+    /* text-align: center; */
+  }
+
+  .game__container-messages,
+  .game__container-inputs {
+    margin: 0;
+  }
+
+  .game__container-tries {
+    margin-bottom: 20px;
+  }
+
+  .btn {
+    margin-bottom: 20%;
+  }
+
+  .input {
+    width: 75%;
+    font-size: 45px;
+  }
+
+  .tries__container {
+    margin-left: 15px;
+  }
+
+  .game__container-tries {
+    justify-content: space-evenly;
+  }
+
+  h1 {
+    margin-top: 50px;
+  }
+
+  body {
+    overflow: scroll;
+  }
+
+  .message {
+    left: 5%;
+    width: 73%;
+    top: 0;
+    height: 90%;
+  }
+
+  .footer {
+    margin-bottom: 10%;
+  }
 }
