@@ -33,8 +33,9 @@ async function controlSubmit() {
         // 1) Update the score
         gameView.updateScore();
 
-        // 2) Render the message
+        // 2) Render the message and update color
         gameView.updateMessage(SUCCESS_MESSAGE);
+        gameView.changeMessageColor(SUCCESS_COLOR);
 
         // 3) Update the letter
         gameView.updateLetter();
@@ -55,6 +56,7 @@ async function controlSubmit() {
 
         // 2) Change color
         decorationsView.changeColor(FAIL_COLOR);
+        gameView.changeMessageColor(FAIL_COLOR);
 
         // 3) Decrease tries
         model.state.tries--;

@@ -75,6 +75,10 @@ class GameView {
     this._parentElement.style.color = this._footer.style.color = this._logo.style.color = this._input.style.color = `#${color}`;
   }
 
+  changeMessageColor(color) {
+    this._message.style.color = `#${color}`;
+  }
+
   substituteButtonsLose() {
     this._submitBtn.classList.add('hidden');
     this._retryBtn.classList.remove('hidden');
