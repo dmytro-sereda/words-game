@@ -23,7 +23,7 @@ function controlPopup() {
 
 async function controlSubmit() {
   try {
-    if (model.state.tries !== 0) {
+    if (model.state.tries !== 0 && gameView.getWord()) {
       if (
         gameView.getWord().length > 2 &&
         gameView.getWord().charAt(0) === gameView.getLetter() &&
