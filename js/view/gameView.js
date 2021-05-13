@@ -72,7 +72,12 @@ class GameView {
 
   changeTextColor(color) {
     this._input.style.borderBottom = `2px solid #${color}`;
-    this._parentElement.style.color = this._footer.style.color = this._logo.style.color = this._input.style.color = `#${color}`;
+    this._message.style.color = `#${color}`;
+    this._parentElement.style.color =
+      this._footer.style.color =
+      this._logo.style.color =
+      this._input.style.color =
+        `#${color}`;
   }
 
   changeMessageColor(color) {

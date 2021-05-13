@@ -78,6 +78,7 @@ async function controlSubmit() {
 
       // 3) Change the button
       gameView.substituteButtonsLose();
+      gameView.changeMessageColor(FAIL_COLOR_WHITE);
     }
   } catch (err) {
     throw err;
