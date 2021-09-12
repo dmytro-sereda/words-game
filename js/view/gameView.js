@@ -1,9 +1,12 @@
 import icon from 'url:../../img/heart.svg';
+import timerIconLight from 'url:../../img/timer-white.svg';
+import timerIcon from 'url:../../img/timer.svg';
 import decorationsView from './decorations.js';
 import {
   INIT_BACKGROUND_COLOR,
   INIT_CIRCLES_COLOR,
   INIT_TEXT_COLOR,
+  TIMER_START,
 } from '../config.js';
 
 class GameView {
@@ -17,6 +20,8 @@ class GameView {
   _triesContainer = document.querySelector('.tries__container');
   _logo = document.querySelector('.title');
   _footer = document.querySelector('.footer');
+  _timer = document.querySelector('.timer');
+  _timerIcon = document.querySelector('.timer-icon');
 
   addHandlerSubmit(handler) {
     this._parentElement.addEventListener('submit', function (e) {
@@ -42,6 +47,10 @@ class GameView {
 
   getLetter() {
     return this._letter.textContent.toLowerCase();
+  }
+
+  updateTimer(time) {
+    this._timer.textContent = time;
   }
 
   updateScore(score = true) {
@@ -78,6 +87,10 @@ class GameView {
       this._logo.style.color =
       this._input.style.color =
         `#${color}`;
+    this._timer.style.color = `#${color}`;
+    color === 'FFF'
+      ? (this._timerIcon.src = `${timerIconLight}`)
+      : (this._timerIcon.src = `${timerIcon}`);
   }
 
   changeMessageColor(color) {
@@ -109,6 +122,7 @@ class GameView {
     decorationsView.changeColor(INIT_CIRCLES_COLOR);
     decorationsView.changeBackground(INIT_BACKGROUND_COLOR);
     this.changeTextColor(INIT_TEXT_COLOR);
+    this.updateTimer(TIMER_START);
   }
 }
 

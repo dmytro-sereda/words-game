@@ -13,7 +13,7 @@
       href="https://fonts.googleapis.com/css2?family=Teko:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <script defer src="js/controller.js"></script>
+    <script defer type="module" src="js/controller.js"></script>
   </head>
   <body>
     <section class="wrapper">
@@ -35,6 +35,11 @@
           id="right-top-corner"
         />
 
+        <div class="timer-container">
+          <img class="timer-icon" src="img/timer.svg" alt="timer" />
+          <span class="timer"></span>
+        </div>
+
         <form class="game__container">
           <div class="game__container-messages">
             <span class="text game-message">Type the first word</span>
@@ -51,7 +56,7 @@
           <div class="game__container-tries">
             <span class="text">Tries Left:</span>
             <div class="tries__container">
-              <img src="img/heart.svg" alt="heart" class="heart" />
+              <!-- <img src="img/heart.svg" alt="heart" class="heart" /> -->
             </div>
           </div>
 
@@ -87,7 +92,6 @@
         </div>
         <div class="overlay"></div>
 
-        <span class="footer">by Dmytro Sereda</span>
         <img
           src="img/circle.svg"
           alt="circle"
@@ -96,8 +100,8 @@
         />
       </div>
     </section>
-    <!-- <footer class="footer">
-      <span class="footer">by Dmytro Sereda</span>
-    </footer> -->
+    <footer class="footer">
+      <span class="credentials">by Dmytro Sereda</span>
+    </footer>
   </body>
 </html>

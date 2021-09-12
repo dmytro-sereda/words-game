@@ -4,6 +4,7 @@ import { async } from 'regenerator-runtime';
 export const state = {
   wordsSubmitted: [],
   tries: TRIES,
+  currentTimerID: null,
 };
 
 export async function searchTheWord(word) {

@@ -38,8 +38,9 @@ h1 {
   font-size: 9.6rem;
   text-align: center;
   margin: 0 auto;
-  margin-top: 7rem;
-  margin-bottom: 16rem;
+  margin-top: 3vh;
+  margin-bottom: 7vh;
+  line-height: 1;
 }
 
 .game__container {
@@ -110,7 +111,7 @@ h1 {
   margin: 0 auto;
   display: block;
   transition: 0.5s ease;
-  margin-bottom: 80%;
+  margin-bottom: 13vh;
 }
 
 .btn:hover {
@@ -130,7 +131,7 @@ h1 {
   width: 28.4rem;
   z-index: -1;
   margin: 0 auto;
-  margin-bottom: 80%;
+  margin-bottom: 13vh;
   display: none;
 }
 
@@ -145,9 +146,9 @@ h1 {
 
 .message {
   width: 80rem;
-  height: 37.3rem;
-  top: 25%;
-  left: 33%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background: #fff;
   display: block;
   position: absolute;
@@ -172,7 +173,7 @@ h1 {
   font-size: 2.1rem;
   font-family: 'GilroyRegular';
   width: 95%;
-  margin-top: 7rem;
+  margin-top: 2rem;
 }
 
 .circle {
@@ -271,13 +272,20 @@ h1 {
     right: 10%;
   }
 
-  .message {
-    top: 20%;
-    left: 24%;
+  #circle-left-bottom {
+    width: 15rem;
+    height: 15rem;
   }
 
-  .btn {
-    margin-bottom: 40%;
+  #left-bottom-corner {
+    width: 15rem;
+    height: 15rem;
+  }
+
+  #right-bottom-corner {
+    width: 15rem;
+    height: 15rem;
+    bottom: -10%;
   }
 }
 
@@ -300,7 +308,6 @@ h1 {
 
   .message {
     width: 70%;
-    left: 14%;
   }
 
   .btn {
@@ -338,10 +345,6 @@ h1 {
 
   .circle-img {
     display: none;
-  }
-
-  .message__text {
-    margin-top: 6rem;
   }
 }
 
@@ -390,13 +393,27 @@ h1 {
   }
 
   .message {
-    left: 5%;
     width: 73%;
-    top: 0;
-    height: 90%;
   }
 
   .footer {
     margin-bottom: 10%;
   }
+}
+
+.timer {
+  margin: 0 auto;
+  font-size: 4rem;
+  text-align: center;
+  line-height: 1;
+  margin-top: 1rem;
+}
+
+.timer-container {
+  display: flex;
+  width: 9rem;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: center;
+  margin-bottom: 2rem;
 }

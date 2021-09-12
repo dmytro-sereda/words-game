@@ -11,6 +11,8 @@ import {
   LOSE_MESSAGE,
   FAIL_COLOR_WHITE,
   TRIES,
+  TIMER_START,
+  TIMER_MESSAGE,
 } from './config.js';
 import modalView from './view/modalView.js';
 import gameView from './view/gameView.js';
@@ -48,6 +50,17 @@ async function controlSubmit() {
 
         // 6) Clear the inputs
         gameView.clearInputs();
+
+        // 7) Update timer
+        gameView.updateTimer(TIMER_START);
+
+        // 8) Kill any active timers
+        model.state.currentTimerID
+          ? window.clearInterval(model.state.currentTimerID)
+          : '';
+
+        // 9) Start timer
+        model.state.currentTimerID = timer(TIMER_START);
       } else {
         // 1) Update message
         model.state.wordsSubmitted.some(word => word === gameView.getWord())
@@ -64,6 +77,17 @@ async function controlSubmit() {
 
         // 4) Clear the inputs
         gameView.clearInputs();
+
+        // 5) Update timer
+        gameView.updateTimer(TIMER_START);
+
+        // 6) Kill any active timers
+        model.state.currentTimerID
+          ? window.clearInterval(model.state.currentTimerID)
+          : '';
+
+        // 7) Start timer
+        model.state.currentTimerID = timer(TIMER_START);
       }
     }
 
@@ -79,6 +103,11 @@ async function controlSubmit() {
       // 3) Change the button
       gameView.substituteButtonsLose();
       gameView.changeMessageColor(FAIL_COLOR_WHITE);
+
+      // 4) Kill any active timers
+      model.state.currentTimerID
+        ? window.clearInterval(model.state.currentTimerID)
+        : '';
     }
   } catch (err) {
     throw err;
@@ -97,6 +126,45 @@ function controlRetry() {
 
   // 4) Clear inputs
   gameView.clearInputs();
+}
+
+/////////////////////
+function controlTimer() {
+  // Start timer
+}
+
+function timer(i) {
+  const intervalID = window.setInterval(() => {
+    if (i === 0) {
+      // 1) Finish interval
+      clearInterval(intervalID);
+
+      // 2) Update message
+      gameView.updateMessage(TIMER_MESSAGE);
+
+      // 3) Update tries
+      model.state.tries--;
+      gameView.updateTries(model.state.tries);
+
+      // 4) Update styles
+      decorationsView.changeColor(FAIL_COLOR);
+      gameView.changeMessageColor(FAIL_COLOR);
+
+      // 5) Update timer
+      gameView.updateTimer(TIMER_START);
+
+      // 6) Clear inputs
+      gameView.clearInputs();
+
+      return;
+    }
+
+    i--;
+    // 1) Update interface
+    gameView.updateTimer(i);
+  }, 1000);
+
+  return intervalID;
 }
 
 function init() {
